@@ -41,6 +41,7 @@ export default {
   background: #467ff7;
   border: none;
   overflow: hidden;
+  cursor: pointer;
   .ripple {
     position: absolute;
     display: block;
