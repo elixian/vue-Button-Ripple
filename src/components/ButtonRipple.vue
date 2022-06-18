@@ -9,12 +9,13 @@ export default {
     btns.forEach((btn) => {
       btn.addEventListener('click', function (e) {
         let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY;
+        let y = e.clientY - e.target.offsetTop;
         let ripples = document.createElement('span');
         ripples.classList.add('ripple');
         ripples.style.left = `${x}px`;
         ripples.style.top = `${y}px`;
         this.appendChild(ripples);
+        console.log('target', e.target.clientHeight);
 
         setTimeout(() => {
           ripples.remove();
